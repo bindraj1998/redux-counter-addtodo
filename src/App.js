@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import { useContext } from 'react';
+import { ReduxContext } from './into/ReduxContext';
+import { increment_counter,decrement_counter } from './into/action';
+import Todo from './into/Todo';
+import Counter from './into/Counter';
 
 function App() {
+  // const {getState,dispatch}=useContext(ReduxContext)
+  // console.log(getState())
+  // const {counter}=getState()
+
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Counter/>
+      <Todo/>
     </div>
   );
 }
